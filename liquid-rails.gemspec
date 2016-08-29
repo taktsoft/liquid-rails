@@ -20,7 +20,16 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ['lib']
 
-  spec.add_dependency 'rails',    '>= 3.2'
-  spec.add_dependency 'liquid',   '>= 3.0.0'
+  spec.add_dependency 'rails', '>= 3.2', '< 5.1'
+  spec.add_dependency 'liquid', '>= 3.0.0', '< 4.0'
   spec.add_dependency 'kaminari', '>= 0.16.1'
+
+  spec.add_development_dependency 'bundler', '>= 1.0.0'
+  spec.add_development_dependency 'rake', '>= 0'
+  spec.add_development_dependency 'rspec-rails', '>= 0'
+  spec.add_development_dependency 'guard-rspec', '>= 0'
+  spec.add_development_dependency 'pry-rails', '>= 0'
+  spec.add_development_dependency 'capybara', '>= 0'
+  spec.add_development_dependency 'coveralls', '>= 0'
+  spec.add_development_dependency 'simplecov', '>= 0'
 end
