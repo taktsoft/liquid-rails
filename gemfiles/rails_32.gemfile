@@ -1,6 +1,9 @@
 source 'https://rubygems.org'
 
 gem 'rails', '~> 3.2.22'
+
 gem 'test-unit', '~> 3.0'
+gem 'mime-types', '< 3.0'
+gem 'listen', '< 3.1'
 
 gemspec path: '../'
