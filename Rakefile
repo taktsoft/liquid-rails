@@ -2,11 +2,9 @@ require 'bundler/gem_tasks'
 require 'rspec/core'
 require 'rspec/core/rake_task'
 
-RSpec::Core::RakeTask.new(:spec) do |spec|
-  spec.pattern = FileList['spec/**/*_spec.rb']
-end
+RSpec::Core::RakeTask.new(:spec)
 
-task default: 'spec:all'
+task :default => :spec
 
 namespace :spec do
   %w(rails_50 rails_42 rails_41 rails_40 rails_32).each do |gemfile|
