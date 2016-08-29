@@ -7,8 +7,8 @@ module Liquid
         def setup_view_and_controller
           @view                 = ActionView::Base.new
           @controller           = ApplicationController.new
-          @request              = ActionController::TestRequest.new('PATH_INFO' => '/')
-          @response             = ActionController::TestResponse.new
+          @request              = build_request_for_liquid
+          @response             = build_response_for_liquid
           @response.request     = @request
           @controller.request   = @request
           @controller.response  = @response
@@ -38,6 +38,24 @@ module Liquid
 
           actual = Liquid::Template.parse(template).render!(context)
           expect(actual.to_s.strip).to eq(expected.to_s.strip)
+        end
+
+        private
+
+        def build_request_for_liquid
+          if ::Rails::VERSION::MAJOR < 5
+            ActionController::TestRequest.new({'PATH_INFO' => '/'})
+          else
+            ActionController::TestRequest.new({'PATH_INFO' => '/'}, {})
+          end
+        end
+
+        def build_response_for_liquid
+          if ::Rails::VERSION::MAJOR < 5
+            ActionController::TestResponse.new
+          else
+            ActionDispatch::TestResponse.new
+          end
         end
       end
     end

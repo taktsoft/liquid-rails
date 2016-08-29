@@ -1,5 +1,9 @@
 class HomeController < ApplicationController
-  before_filter :set_book
+  if ::Rails::VERSION::MAJOR < 5
+    before_filter :set_book
+  else
+    before_action :set_book
+  end
 
   def index
     render layout: false

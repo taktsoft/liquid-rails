@@ -8,6 +8,8 @@ Bundler.require(*Rails.groups)
 require "liquid-rails"
 
 module Dummy
+  RAILS_GEM_VERSION = Gem::Version.new(Rails::VERSION::STRING).freeze
+
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
