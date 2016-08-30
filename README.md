@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/taktsoft/liquid-rails.svg?branch=master)](https://travis-ci.org/taktsoft/liquid-rails) [![Gem Version](https://badge.fury.io/rb/liquid-rails.svg)](http://badge.fury.io/rb/liquid-rails)
+[![Build Status](https://travis-ci.org/taktsoft/liquid-rails.svg?branch=master)](https://travis-ci.org/taktsoft/liquid-rails) [![Gem Version](https://badge.fury.io/rb/taktsoft_liquid-rails.svg)](http://badge.fury.io/rb/taktsoft_liquid-rails)
 
 # Liquid-Rails
 
