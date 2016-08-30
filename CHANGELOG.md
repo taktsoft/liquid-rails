@@ -1,5 +1,9 @@
 # Overview
 
+## 0.1.6
+
+* Fixes autoloading for ResolverSystem
+
 ## 0.1.5
 
 * Uses controller's lookup context to find partials.

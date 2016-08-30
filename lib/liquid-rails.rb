@@ -7,6 +7,7 @@ module Liquid
   module Rails
     autoload :TemplateHandler,  'liquid-rails/template_handler'
     autoload :FileSystem,       'liquid-rails/file_system'
+    autoload :ResolverSystem,   'liquid-rails/resolver_system'
 
     autoload :Drop,             'liquid-rails/drops/drop'
     autoload :CollectionDrop,   'liquid-rails/drops/collection_drop'
