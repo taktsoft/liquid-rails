@@ -8,7 +8,12 @@ describe 'Request', type: :feature do
       Liquid::Template.file_system = Liquid::Rails::ResolverSystem.new
 
       ApplicationController.class_eval do
-        before_filter :prepend_view_path_if_param_present
+        if ::Rails::VERSION::MAJOR < 5
+          before_filter :prepend_view_path_if_param_present
+        else
+          before_action :prepend_view_path_if_param_present
+        end
+
         def prepend_view_path_if_param_present
           prepend_view_path Rails.root.join('vendor/theme') if params[:prepend_view_path]
         end
