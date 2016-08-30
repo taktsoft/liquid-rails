@@ -1,5 +1,9 @@
 # Overview
 
+## 0.1.5
+
+* Uses controller's lookup context to find partials.
+
 ## 0.1.4
 
 * Support for Rails 5.0
